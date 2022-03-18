@@ -1,0 +1,381 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.registerContainer
+{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.cardContainerLeft
+{
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    background-image: url(./img/cardBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cardContainerRigth
+{
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+}
+.card
+{
+    background-color: white;
+    display: flex;
+    height: 500px;
+}
+.cardContainerLeft > .card
+{
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    width: 300px;
+    box-shadow: -5px 0px 20px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0px 0px 10px;
+}
+.description
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.description h2
+{
+    color: white;
+}
+.description > .item
+{
+    font-size: 0.9rem;
+    color: white;
+}
+.item > img
+{
+    padding: 5PX;
+    display: inline;
+    width: 40px;
+}
+.item h3, p
+{
+    display: inline;
+}
+.cardContainerRigth > .card
+{
+    padding: 10px;
+    align-items: center;
+    width: 600px;
+    box-shadow: 5px 0px 20px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 10px 10px 0px;
+}
+.cardContainerRigth > .card::-webkit-scrollbar 
+{
+    width: 10px;
+}
+  
+.cardContainerRigth > .card::-webkit-scrollbar-thumb 
+{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    margin-right: 5px;
+    border: 8px solid transparent;
+}
+.sigIn
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.signInOption
+{
+    max-width: 300px;
+    width: 100%;
+    margin: 10px;
+}
+.autoSignIn
+{
+    position: relative;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+    text-align: center;
+}
+.autoSignIn p
+{
+    position: relative;
+    top: 10px
+}
+.autoSignIn > img
+{
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sigIn > span::before
+{
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: rgb(87, 87, 87);
+    margin-right: 10px;
+}
+.sigIn > span::after
+{
+    vertical-align: middle;
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: rgb(87, 87, 87);
+    margin-left: 10px;
+}
+#signEmail
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgb(115 148 165);
+    padding: 10px;
+    outline: none;
+}
+.error
+{
+    display: inline-block;
+    margin: 5px 0px  5px 0px;
+    color: crimson;
+}
+.signEmailForm > button
+{
+    background-color: rgb(115 148 165);
+    color: white;
+    appearance: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.signEmailForm > button:hover
+{
+    background-color: rgb(93, 121, 134);
+}
+.register
+{
+    padding-top: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    position: relative;
+}
+.registerInputContainer
+{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.registerInputContainer > .formItem
+{
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(115 148 165);
+}
+.selectBox
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+.selectBox .optionsContainer
+{
+    background-color:  #6691a6;
+    color: white;
+    width: 100%;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+.selected
+{
+    background-color: #6691a6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: white;
+    position: relative;
+}
+.selected::after
+{
+    content: "";
+    background-image: url(./img/selectArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 13px;
+    top: 7px;
+    transition: all 0.4s;
+}
+.selectBox .optionsContainer.active
+{
+    max-height: 120px;
+    opacity: 1;
+}
+.selectBox .optionsContainer.active + .selected::after
+{
+    transform: rotateZ(180deg);
+}
+.selectBox .option, .selected
+{
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.selectBox .option:hover
+{
+    background-color: #89afc2 ;
+}
+.selectBox .option .radio
+{
+    display: none;
+}
+.registerForm 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    max-height: 450px;
+}
+.registerForm::-webkit-scrollbar 
+{
+    width: 5px;
+}
+.registerForm::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.registerForm::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+.registerForm::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.registerForm > button
+{
+    background-color: rgb(115 148 165);
+    color: white;
+    appearance: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0px 20px 0px;
+}
+.registerForm > button:hover
+{
+    background-color: rgb(93, 121, 134);
+}
+.success
+{
+    display: none;
+    width: 90%;
+    height: 450px;
+}
+.successContainer
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.successContainer > p
+{
+    font-size: 2rem;
+}
+@media screen and (max-width: 900px)
+{
+    .registerContainer
+    {
+        flex-direction: column;
+        height: auto;
+    }
+    .cardContainerLeft
+    {
+        padding: 0px;
+        width: 100%;
+        height: 500px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .cardContainerRigth
+    {
+        padding: 0px 0px 20px 0px;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .cardContainerLeft > .card
+    {
+        width: 90%;
+        height: 400px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .cardContainerRigth > .card
+    {
+        width: 90%;
+        height: auto;
+        border-radius: 00px 0px 10px 10px;
+    }
+
+}
+@media screen and (max-width: 500px)
+{
+    .cardContainerLeft
+    {
+        height: 550px;
+    }
+}

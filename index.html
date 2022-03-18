@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="registerContainer">
+        <div class="cardContainerLeft">
+            <div class="card">
+                <div class="description">
+                    <h2>Começe agora a descobrir novos lugares</h2>
+                    <div class="item"><img src="./img/economia.png" alt="">
+                        <h3>Mais economia:</h3>
+                        <p>A CDC oferece o melhor custo benefício aos nosso clientes, com ofertas para todos os bolsos.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/maisTrezentos.png" alt="">
+                        <h3>Mais de 300 planos de viagens:</h3>
+                        <p>Nossa plataforma conta com diverssos planos de viagem para qalquer lugar do Brasil ou para viagens internacionais.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/roteiro.png" alt="" srcset="">
+                        <h3>Melhores roteiros:</h3>
+                        <p>Nossa equipe de desenvolvimento de roteiros busca sempre a melhor experiência para os viajantes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardContainerRigth">
+            <div class="card">
+                <div class="sigIn">
+                    <h2>Crie sua conta de graça</h2>
+                    <div class="signInOption">
+                        <div class="autoSignIn">
+                            <img src="./img/googleIcon.png" alt="">
+                            <p>Sign up with Google</p>
+                        </div>
+                    </div>
+                    <div class="signInOption">
+                        <div class="autoSignIn">
+                            <img src="./img/facebookIconpng.png" alt="">
+                            <p>Sign up with facebook</p>
+                        </div>
+                    </div>
+                    <span>or</span>
+                    <div class="signInOption">
+                        <div class="emailSigIn">
+                            <form class="signEmailForm" action="">
+                                <div class="signInputContainer">
+                                    <input type="email" name="usuario-email" id="signEmail" class="formItem" placeholder="Sign with email" required>
+                                    <span class="error"></span>
+                                </div>
+                                <button type="submit"><b>Sign In</b></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="register">
+                    <form class="registerForm" action="">
+                        <div class="registerInputContainer">
+                            <input type="text" name="usuarioName" id="usuarioName" class="formItem" placeholder="Name" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="registerInputContainer">
+                            <input type="text" name="usuarioLastName" id="usuarioLastName" class="formItem" placeholder="Last name" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="registerInputContainer">
+                            <div class="selectContainer">
+                                <div class="selectBox">
+                                    <div class="optionsContainer">
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="masculino" name="category">
+                                            <label for="masculino">Masculino</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="feminino" name="category">
+                                            <label for="feminino">Feminino</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="outro" name="category">
+                                            <label for="outro">Outro</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">Selecione seu sexo</div>
+                                </div>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+                        <div class="registerInputContainer">
+                            <input type="password" name="usuarioPassword" id="usuarioPassword" class="formItem" placeholder="Password   Ex: Usuario123" pattern="[a-zA-Z0-9]{6,50}$" required>
+                            <span class="error"></span>
+                        </div>
+                        <div class="registerInputContainer">
+                            <input type="password" name="usuarioConfirmPassword" id="usuarioConfirmPassword" class="formItem" placeholder="Confirm password" required>
+                            <span class="error"></span>
+                        </div>
+                        <button type="submit"><b>Register</b></button>
+                    </form>
+                </div>
+                <div class="success">
+                    <div class="successContainer">
+                        <img src="./img/success.png" alt="">
+                        <H3>Parabéns, você se registrou com sucesso.</H3>
+                        <span><a href=""></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
